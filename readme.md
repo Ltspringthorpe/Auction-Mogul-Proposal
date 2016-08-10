@@ -17,46 +17,19 @@ Auction Mogul will be a site to help with buying and selling on World of Warcraf
 - Index view of your inventory/bank
 - Index view of good deals specific to your watchlist and inventory/bank
 
-## Schema
+## Database Schema
+[Schema][schema]
+[schema]: ./docs/schema.md
 
-### users
-column name      | data type | details
------------------|-----------|-----------------------
-id               | integer   | not null, primary key
-username         | string    | not null, indexed, unique
-password_digest  | string    | not null
-session_token    | string    | not null, indexed, unique
-
-### watchlist
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-user_id     | integer   | not null, foreign key (references users), indexed
-wow_id      | integer   | not null, foreign key (references Blizzard's database), indexed
-WTB         | boolean   | not null, default true
-WTS         | boolean   | not null, default true
-
-### toon
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-user_id     | integer   | not null, foreign key (references users), indexed
-wow_id      | integer   | not null, foreign key (references Blizzard's database), indexed
+## Wireframes
+[Item Index][index]
+[index]: ./docs/WireframeItemIndex.png
+[Item Show][show]
+[show]: ./docs/WireframeItemShow.png
 
 ## Rough Timeline
-
-### Week 1
-- Rails authentication
-- Blizzard authentication
-- Setup Auction House API
-- Watchlist form component
-- Item-show component
-- Item-index components
-
-### Week 2
-- Styling and CSS
-- More CSS
-- Oh my god there's so much CSS to be done
+[Timeline][timeline]
+[timeline]: ./docs/timeline.md
 
 ## Future Features
 - Gets list of pets/mounts/recipes that your character doesn't know and adds them to the watchlist
