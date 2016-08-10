@@ -17,6 +17,8 @@
 
 ### Week 2
 - Styling and CSS
+- More CSS
+- Oh god there is so much CSS
 
 ## Future Features
 - Gets list of pets/mounts/recipes that your character doesn't know and adds them to the watchlist
